@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphicx}        % 插入图片
+\usepackage{amsmath}         % 数学公式
+\usepackage{amssymb}         % 数学符号
+\usepackage{hyperref}        % 超链接
+\usepackage{geometry}        % 页面设置
+\geometry{margin=1in}        % 设置页边距
+
+% 自定义标题部分
+\title{Title of the Paper}
+\author{Author Name\thanks{email@domain.com} \\ Department, University, City, Country}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is the abstract of the paper. The abstract provides a brief summary of the research question, methodology, results, and conclusions. It should be concise and informative.\cite{kirkpatrick1983optimization}
+\end{abstract}
+
+\section{Introduction}
+The introduction should provide an overview of the topic, background information, and the objectives of the paper. You can include citations using \texttt{\textbackslash cite\{key\}} for references.
+
+\section{Related Work}
+Discuss previous research and studies that are relevant to your topic. Explain how your work builds upon or differs from these studies.
+
+\section{Methodology}
+Describe the methods, algorithms, or experimental procedures used in your study. Use equations, figures, and tables if necessary.
+
+\section{Problem Formulation}
+In this section, we are going to formulate a new problem called ``Light Up'' based on an existed game. More specifically, we will declare the definition of this problem and introduce the arguments we needed. Moreover, we will discuss some basic and interesting properties of the problem.
+
+\subsection{Problem definition}
+The original version of this problem is the classic "Lights Out" puzzle\cite{cowen2000lights}. The initial expression of the problem is as follows:
+\begin{quote}
+    A rectangular board is constructed from squares. (The original puzzle consists of a 5-by-5 board.) Squares can be in one of two states:
+    \textit{light} or \textit{dark}. If a square is touched, its state reverses and so does the state of each of its neighboring squares (that is, those squares with which it shares an edge). The puzzle is to touch squares of a board, which are initially all lit, so that all squares become \textit{dark}.
+\end{quote}
+
+We will generalize this problem to a graph-based version and weaken the final goal to turn off as many lamps as possible, the problem is defined as follows:
+\begin{quote}
+        For a set of \textit{lamps} $V$ which have state \textit{on} or \textit{off}, a set of \textit{wires} $E$ where each \textit{wire} connects two \textit{lamps}, and a random initial state of the \textit{lamps}, we define a switch operation as flipping the state of a \textit{lamp} and the states of all the \textit{lamps} connected to it. The goal is to find a sequence of switch operations that turns \textit{off} \textit{lamps} as many as possible.
+\end{quote}
+
+It should be noted that though the \textit{wires} are 
+\subsection{Arguments}
+To solve the ``Light Up'' problem, the arguments are necessary to be declared. We define the following arguments for the problem:
+\begin{itemize}
+    \item $G = (V, E)$: The graph representation of the problem, where $V$ is the set of vertices representing the lamps and $E$ is the set of edges representing the wires connecting the lamps.
+    \item $n$: The number of lamps ($|V|$) in the problem.
+    \item $m$: The number of wires ($|E|$) in the problem.
+    \item $S_0$: The set of lamps that are \textit{on} at the beginning.
+    \item $S$: The set of lamps that are \textit{on} in the current state.
+    \item $S_f$: The set of lamps that are \textit{on} in the final state.
+    \item $f(S)$: The number of \textit{on} lamps in the set $S$.
+\end{itemize}
+
+\subsection{Basic Properties}
+
+
+
+
+
+\subsection{Equations}
+You can include mathematical expressions and equations:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\section{Results}
+Present the results of your research. You can use tables and figures to organize the data.
+
+\subsection{Figures}
+Include figures using the following format:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image}
+    \caption{An example figure}
+    \label{fig:example}
+\end{figure}
+
+\subsection{Tables}
+You can include tables as shown below:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        Value 1 & Value 2 & Value 3 \\
+        Value 4 & Value 5 & Value 6 \\
+        \hline
+    \end{tabular}
+    \caption{An example table}
+    \label{tab:example}
+\end{table}
+
+\section{Discussion}
+Interpret your results, compare them with previous findings, and discuss their implications. 
+
+\section{Conclusion}
+Summarize the main findings and contributions of the paper. Suggest possible directions for future research.
+
+\section*{Acknowledgments}
+If you would like to acknowledge funding sources, collaborators, or other assistance, you can do so in this section.
+
+\bibliography{algo_project}
+\bibliographystyle{plain}
+
+\end{document}
